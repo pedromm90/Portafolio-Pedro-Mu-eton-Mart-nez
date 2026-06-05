@@ -1,9 +1,11 @@
 /* --- Variables de colores --- */
 :root {
   --primary: #2563eb;
+  --cyan: #22d3ee;
   --dark: #0f172a;
   --light: #f8fafc;
   --grey: #64748b;
+  --transparent: rgba(0, 0, 0, 0);
   --transition: all 0.3s ease;
 }
 
@@ -79,12 +81,12 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: var(--dark);
-  font-weight: 500;
+  font-weight: 700;
   transition: var(--transition);
 }
 
 nav ul li a:hover {
-  color: var(--primary);
+  color: var(--cyan);
 }
 
 /* --- HERO & SECTIONS (Same as before) --- */
@@ -95,7 +97,7 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  /* background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); */
   padding: 0 20px;
 }
 
@@ -114,10 +116,47 @@ nav ul li a:hover {
   margin-top: 20px;
 }
 
+.btn:hover {
+  transition: all .5s ease;
+}
+
+.btn-proyectos {
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0) !important;
+  border: solid 1px var(--cyan) !important;
+}
+
+.btn-proyectos:hover {
+  background: var(--primary) !important;
+  border: solid 1px var(--primary) !important;
+}
+
+.hero-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(./img/hero.png);
+  background-size: cover;
+  background-position: center;
+}
+
 section {
-  padding: 100px 20px;
-  max-width: 1100px;
+  padding: 70px 20px;
+  max-width: 990px;
   margin: 0 auto;
+}
+
+.sobre-mi {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2px;
+}
+
+.sobre-2 {
+  grid-column: span 3 / span 3;
+}
+
+.foto-dev {
+  width: 80%;
 }
 
 h2 {
@@ -181,10 +220,29 @@ h2 {
   #menu-toggle:checked~.menu span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+
+  .sobre-mi {
+    grid-template-columns: 1fr;
+    /* Cambia a una sola columna */
+    grid-template-rows: auto;
+    /* Ajusta las filas automáticamente */
+  }
+
+  .sobre-2 {
+    grid-column: span 1 / span 1;
+    /* Restablece el ancho al 100% de la pantalla */
+  }
+
+  .foto-dev {
+    display: block;
+    margin: 20px auto;
+    width: 70%;
+    height: auto;
+  }
 }
 
-/* Project Grid for visual context */
-.project-grid {
+/* Grid de los Proyectos */
+.proyecto-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -195,4 +253,16 @@ h2 {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Links Externos */
+.links-externos {
+  color: var(--cyan);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.links-externos:hover {
+  color: var(--primary);
+  transition: all .5s ease;
 }
