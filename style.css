@@ -1,12 +1,12 @@
 /* --- Variables de colores --- */
 :root {
   --primary: #2563eb;
-  --cyan: #22d3ee;
   --dark: #0f172a;
   --light: #f8fafc;
   --grey: #64748b;
   --transparent: rgba(0, 0, 0, 0);
   --transition: all 0.3s ease;
+  /* --cyan: #22d3ee; */
 }
 
 /* Reset */
@@ -86,7 +86,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: var(--cyan);
+  color: var(--primary);
 }
 
 /* --- HERO & SECTIONS (Same as before) --- */
@@ -123,7 +123,7 @@ nav ul li a:hover {
 .btn-proyectos {
   font-weight: 700;
   background: rgba(0, 0, 0, 0) !important;
-  border: solid 1px var(--cyan) !important;
+  border: solid 1px var(--primary) !important;
 }
 
 .btn-proyectos:hover {
@@ -147,12 +147,17 @@ section {
 .sobre-mi {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  /* grid-template-rows: repeat(2, 1fr); */
   gap: 2px;
 }
 
 .sobre-2 {
   grid-column: span 3 / span 3;
+}
+
+.info-dev {
+  font-size: 32px;
+  text-align: justify;
 }
 
 .foto-dev {
@@ -165,7 +170,17 @@ h2 {
   font-size: 2.5rem;
 }
 
-/* --- RESPONSIVE MOBILE LOGIC (The Magic) --- */
+/* --- MEDIA QUERIES --- */
+@media (max-width: 992px) {
+  .foto-dev {
+    height: 90%;
+  }
+
+  .info-dev {
+    font-size: 27px;
+  }
+}
+
 @media (max-width: 768px) {
   .menu {
     display: flex;
@@ -236,7 +251,7 @@ h2 {
   .foto-dev {
     display: block;
     margin: 20px auto;
-    width: 70%;
+    width: 60%;
     height: auto;
   }
 }
@@ -249,15 +264,30 @@ h2 {
 }
 
 .card {
+  transition: all .3s ease;
   background: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-link:hover {
+  cursor: pointer;
+}
+
+.proyecto-img {
+  max-width: 100%;
+  margin-top: 10px;
+}
+
 /* Links Externos */
 .links-externos {
-  color: var(--cyan);
+  color: var(--dark);
+  font-size: 22px;
   text-decoration: none;
   font-weight: 700;
 }
