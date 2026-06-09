@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Portafolio</title>
+  <meta name="description"
+    content="Pedro Muñeton Martínez. Desarrollador Web. Tecnólogo en Análisis y Desarrollo de Software, egresado del Servicio de Educación Nacional (SENA). Técnico Profesional en Sistemas e Informática, egresado del Instituto de Educación Técnica Profesional (INTEP, Roldanillo)">
+  <title>Portafolio - Pedro Muñeton Martínez</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -12,7 +14,6 @@
 </head>
 
 <body>
-
   <!-- Navbar -->
   <nav>
     <div class="logo">Pedro Muñeton Martínez</div>
@@ -36,50 +37,12 @@
     </ul>
   </nav>
 
-  <!-- Hero Header -->
-  <header class="hero-header" id="inicio">
-    <h1 style="color: #fff;">Pedro Muñeton Martínez</h1>
-    <h3 style="color: #2563eb;">Desarrollador Web - Full Stack</h3>
-    <a class="btn btn-proyectos" href="#proyectos">Proyectos</a>
-  </header>
+  <!-- Carga el JS de router -->
+  <main>
+    <div id="app"></div>
+  </main>
 
-  <section id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <div class="sobre-mi">
-      <div class="sobre-1">
-        <img class="foto-dev" src="img/pedro.jpeg" alt="Pedro Muñeton">
-      </div>
-      <div class="sobre-2">
-        <p class="info-dev">
-          Soy Desarrollador de plataformas, aplicaciones y páginas Web. Con experiencia en diseño web, implementación de
-          bases
-          de datos, levantamiento de requerimientos, construcción y estructuración de APIs.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="proyectos">
-    <h2>Proyectos</h2>
-    <div class="proyecto-grid">
-      <a class="card-link" href="#">
-        <div class="card">
-          <img class="proyecto-img" src="img/proyectos/egresados-intep.png" alt="Comunidad de Egresados INTEP">
-        </div>
-      </a>
-
-      <!-- <div class="card">
-        <h3>Proyecto 2</h3>
-        <p>Descripción del proyecto</p>
-      </div>
-      <div class="card">
-        <h3>Proyecto 3</h3>
-        <p>Descripción del proyecto</p>
-      </div> -->
-    </div>
-  </section>
-
+  <!-- Sección de contacto -->
   <section id="contacto">
     <h2>Contacto</h2>
     <p style="text-align: center;">
@@ -89,10 +52,13 @@
     </p>
   </section>
 
+  <!-- Pié de página con Copyright -->
   <footer style="text-align: center; padding: 2rem; background: rgb(31 41 55); color: white;">
     <p>© 2026 - Pedro Muñeton Martínez</p>
   </footer>
 
+  <!-- Enrutador -->
+  <script src="router.js"></script>
 </body>
 
 </html>
