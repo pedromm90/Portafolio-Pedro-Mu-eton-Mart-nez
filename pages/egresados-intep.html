@@ -2,13 +2,13 @@
 <style>
   .info-proyecto {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(5, 1fr); */
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 
     padding: 120px 20px;
-    max-width: 990px;
+    max-width: 95%;
     margin: 0 auto;
   }
 
@@ -20,13 +20,100 @@
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
+
+  @media only screen and (min-width: 1200px) {
+    .txt-content {
+      text-align: justify;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    .txt-info {
+      margin: 0 auto;
+      padding: 15px;
+    }
+
+    .proyecto-img {
+      height: 100%;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .txt-content {
+      font-size: 18px;
+    }
+
+    .txt-info {
+      padding: 15px;
+    }
+
+    .proyecto-img {
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .info-proyecto {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .txt-content {
+      margin-top: 40px;
+      font-size: 20px;
+    }
+
+    .txt-info {
+      margin: 20px auto 0;
+      order: 1 !important;
+    }
+
+    .proyecto-img {
+      height: 100%;
+    }
+  }
 </style>
 
 <div class="page-enter">
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Pedro Muñeton Martínez</div>
+
+    <!-- Botón Menú Hamburguesa -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Ícono del Menú Hamburguesa -->
+    <label for="menu-toggle" class="menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <!-- Links del Menú -->
+    <ul>
+      <li>
+        <a href="/">
+          <i class="fa-solid fa-arrow-left"></i> Regresar al inicio
+        </a>
+      </li>
+    </ul>
+  </nav>
   <div class="info-proyecto">
+    <div class="txt-info">
+      <h1 style="text-align: center;">Comunidad de Egresados INTEP</h1>
+      <p class="txt-content">
+        El portal de egresados del INTEP funciona como el espacio digital oficial para mantener el vínculo con
+        graduados,
+        ofreciendo servicios de registro, directorios profesionales y oportunidades laborales. La plataforma permite la
+        inscripción de exalumnos y la visibilización de sus emprendimientos, con un tiempo de validación de cuenta de 24
+        a 72
+        horas hábiles.
+      </p>
+    </div>
     <div class="card-project">
       <a class="card-link" href="https://egresados.intep.edu.co/" target="_blank" rel="noopener noreferrer">
-        <img class="proyecto-img" src="../img/egresados-intep.png" alt="Comunidad de Egresados INTEP">
+        <img class="proyecto-img" src="../img/egresados-intep.png" alt="Comunidad de Egresados INTEP"
+          title="Ingresa a: Comunidad de Egresados INTEP">
     </div>
   </div>
 </div>
